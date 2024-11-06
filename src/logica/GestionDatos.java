@@ -60,4 +60,24 @@ public class GestionDatos {
         }
         return consumoTotal;
     }
+
+    public double calcularProduccionPaisEnergia(String pais, String tipo) {
+        double energiaTotal = 0.0;
+        for (EnergiaRenovable energia : energias) {
+            if (energia.getPais().equalsIgnoreCase(pais) && energia.getTipo().equalsIgnoreCase(tipo)) {
+                energiaTotal += energia.calcularProduccion();
+            }
+        }
+        return energiaTotal;
+    }
+
+    public double calcularConsumoPaisEnergia(String pais, String tipo) {
+        double consumoTotal = 0.0;
+        for (EnergiaRenovable energia : energias) {
+            if (energia.getPais().equalsIgnoreCase(pais) && energia.getTipo().equalsIgnoreCase(tipo)) {
+                consumoTotal += energia.getConsumo();
+            }
+        }
+        return consumoTotal;
+    }
 }
