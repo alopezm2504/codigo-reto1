@@ -6,7 +6,7 @@ public class Eolica extends EnergiaRenovable {
     private double velocidadViento; // en m/s
     private double areaBarrido; // en m² area barrida por las aspas del aerogenerador
     public Eolica(String id, String pais, int anio, double consumo, double velocidadViento, double areaBarrido) {
-        super(id,"Eólica", pais, anio, consumo);
+        super(id,"Eolica", pais, anio, consumo);
         this.velocidadViento = velocidadViento;
         this.areaBarrido = areaBarrido;
     }

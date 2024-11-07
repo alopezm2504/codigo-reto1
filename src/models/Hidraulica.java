@@ -6,7 +6,7 @@ public class Hidraulica extends EnergiaRenovable{
     private double flujo;
     private double altura;
     public Hidraulica(String id, String pais, int anio, double consumo, double flujo, double altura) {
-        super(id,"Hidráulica", pais, anio, consumo);
+        super(id,"Hidraulica", pais, anio, consumo);
         this.flujo=flujo;
         this.altura=altura;
     }

@@ -27,7 +27,7 @@ public class GestionDatos {
     public double calcularProduccionTotal() {
         double energiaTotal = 0.0;
         for (EnergiaRenovable energia : energias) {//sirve para recorrer la lista de energias
-           energiaTotal += energia.calcularProduccion();
+            energiaTotal += energia.calcularProduccion();
         }
         return energiaTotal;
     }
@@ -60,8 +60,7 @@ public class GestionDatos {
         }
         return consumoTotal;
     }
-
-    public double calcularProduccionPaisEnergia(String pais, String tipo) {
+    public double calcularProduccionPaisTipo(String pais, String tipo) {
         double energiaTotal = 0.0;
         for (EnergiaRenovable energia : energias) {
             if (energia.getPais().equalsIgnoreCase(pais) && energia.getTipo().equalsIgnoreCase(tipo)) {
@@ -70,8 +69,7 @@ public class GestionDatos {
         }
         return energiaTotal;
     }
-
-    public double calcularConsumoPaisEnergia(String pais, String tipo) {
+    public double calcularConsumoPaisTipo(String pais, String tipo) {
         double consumoTotal = 0.0;
         for (EnergiaRenovable energia : energias) {
             if (energia.getPais().equalsIgnoreCase(pais) && energia.getTipo().equalsIgnoreCase(tipo)) {
@@ -79,5 +77,15 @@ public class GestionDatos {
             }
         }
         return consumoTotal;
+    }
+
+    public double calcularProduccionPaisAnio(String pais, int anio) {
+        double energiaTotal = 0.0;
+        for (EnergiaRenovable energia : energias) {
+            if (energia.getPais().equalsIgnoreCase(pais) && energia.getAnio() == anio) {
+                energiaTotal += energia.calcularProduccion();
+            }
+        }
+        return energiaTotal;
     }
 }
